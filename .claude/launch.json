@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "moto-template",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8090", "--directory", "/Users/janperez/Desktop/CLAUDE/WEBSITES/moto-template"],
+      "port": 8090
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería — MotoTech Barcelona</title>
+  <meta name="description" content="Galería de trabajos realizados en MotoTech Barcelona. Reparaciones, personalizaciones y mantenimiento de motos." />
+
+  <meta property="og:title" content="Galería — MotoTech Barcelona" />
+  <meta property="og:description" content="Descubre nuestros trabajos de reparación y personalización de motos en Barcelona." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header id="header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Navegación principal">
+        <a href="index.html" class="logo" aria-label="MotoTech Barcelona - Inicio">
+          <span class="logo-mark"><i data-lucide="bike"></i></span>
+          MotoTech
+        </a>
+        <div class="nav-primary">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="servicios.html" class="nav-link">Servicios</a>
+          <a href="galeria.html" class="nav-link active">Galería</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+        <div class="nav-actions">
+          <a href="tel:+34930000000" class="nav-phone"><i data-lucide="phone"></i> 93 XXX XX XX</a>
+          <a href="contacto.html" class="nav-action-cta">Presupuesto</a>
+        </div>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══ MOBILE NAV ═══ -->
+  <div class="mobile-nav" aria-hidden="true">
+    <div class="mobile-overlay"></div>
+    <div class="mobile-drawer" role="dialog" aria-label="Menú de navegación">
+      <div class="drawer-header">
+        <span class="logo" style="font-size:1.1rem">
+          <span class="logo-mark" style="width:30px;height:30px"><i data-lucide="bike" style="width:14px;height:14px"></i></span>
+          MotoTech
+        </span>
+        <button class="close-drawer" aria-label="Cerrar menú"><i data-lucide="x" style="width:20px;height:20px"></i></button>
+      </div>
+      <a href="index.html" class="drawer-link"><i data-lucide="home"></i> Inicio</a>
+      <a href="servicios.html" class="drawer-link"><i data-lucide="wrench"></i> Servicios</a>
+      <a href="galeria.html" class="drawer-link"><i data-lucide="image"></i> Galería</a>
+      <a href="contacto.html" class="drawer-link"><i data-lucide="mail"></i> Contacto</a>
+      <a href="tel:+34930000000" class="drawer-link"><i data-lucide="phone"></i> 93 XXX XX XX</a>
+      <a href="contacto.html" class="btn btn-primary" style="justify-content:center;margin-top:.75rem">Pedir Presupuesto</a>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <nav class="breadcrumb reveal d1" aria-label="Migas de pan">
+        <a href="index.html">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Galería</span>
+      </nav>
+      <span class="tag reveal d2">Nuestro trabajo habla</span>
+      <h1 class="h1 reveal d3">Galería de Trabajos</h1>
+      <p class="lead reveal d4" style="max-width:560px">Cada moto tiene una historia. Aquí puedes ver algunos de los proyectos que nos han pasado por el taller.</p>
+    </div>
+  </section>
+
+  <!-- ═══ GALLERY ═══ -->
+  <section style="padding:5rem 0" id="galeria">
+    <div class="container">
+      <!-- Filters — underline style -->
+      <div class="gallery-filters reveal">
+        <button class="gallery-filter active" data-filter="todos">Todos</button>
+        <button class="gallery-filter" data-filter="reparaciones">Reparaciones</button>
+        <button class="gallery-filter" data-filter="custom">Custom</button>
+        <button class="gallery-filter" data-filter="mantenimiento">Mantenimiento</button>
+      </div>
+
+      <!-- Grid — masonry-style with varying heights -->
+      <div class="gallery-grid" data-stagger="80">
+
+        <!-- Reparaciones -->
+        <div class="gallery-item" data-category="reparaciones">
+          <div class="gallery-placeholder gp-1"><span>Reparación motor</span></div>
+          <div class="gallery-caption">Reconstrucción de motor Yamaha MT-07 2019</div>
+        </div>
+        <div class="gallery-item" data-category="reparaciones">
+          <div class="gallery-placeholder gp-4"><span>Diagnóstico eléctrico</span></div>
+          <div class="gallery-caption">Diagnóstico sistema eléctrico BMW R1250GS</div>
+        </div>
+        <div class="gallery-item" data-category="reparaciones">
+          <div class="gallery-placeholder gp-5"><span>Reparación embrague</span></div>
+          <div class="gallery-caption">Sustitución embrague Ducati Monster 821</div>
+        </div>
+
+        <!-- Custom -->
+        <div class="gallery-item" data-category="custom">
+          <div class="gallery-placeholder gp-2"><span>Escape custom</span></div>
+          <div class="gallery-caption">Escape Akrapovic en Honda CB650R</div>
+        </div>
+        <div class="gallery-item" data-category="custom">
+          <div class="gallery-placeholder gp-6"><span>LED custom</span></div>
+          <div class="gallery-caption">Iluminación LED Triumph Street Triple</div>
+        </div>
+        <div class="gallery-item" data-category="custom">
+          <div class="gallery-placeholder gp-3"><span>Suspensión racing</span></div>
+          <div class="gallery-caption">Suspensión Ohlins KTM Duke 790</div>
+        </div>
+
+        <!-- Mantenimiento -->
+        <div class="gallery-item" data-category="mantenimiento">
+          <div class="gallery-placeholder gp-3"><span>Mantenimiento completo</span></div>
+          <div class="gallery-caption">Revisión 20.000km Kawasaki Z900 2021</div>
+        </div>
+        <div class="gallery-item" data-category="mantenimiento">
+          <div class="gallery-placeholder gp-1"><span>Pre-ITV</span></div>
+          <div class="gallery-caption">Preparación ITV Suzuki SV650 — Aprobada</div>
+        </div>
+        <div class="gallery-item" data-category="mantenimiento">
+          <div class="gallery-placeholder gp-4"><span>Cambio neumáticos</span></div>
+          <div class="gallery-caption">Neumáticos Michelin Road 6 en Aprilia Tuono</div>
+        </div>
+
+        <!-- Mixed -->
+        <div class="gallery-item" data-category="custom">
+          <div class="gallery-placeholder gp-5"><span>Vinilo custom</span></div>
+          <div class="gallery-caption">Vinilado completo Yamaha R6 racing</div>
+        </div>
+        <div class="gallery-item" data-category="reparaciones">
+          <div class="gallery-placeholder gp-6"><span>Reparación ABS</span></div>
+          <div class="gallery-caption">Sistema ABS Kawasaki Versys 650</div>
+        </div>
+        <div class="gallery-item" data-category="mantenimiento">
+          <div class="gallery-placeholder gp-2"><span>Revisión completa</span></div>
+          <div class="gallery-caption">Mantenimiento anual Harley-Davidson Sportster</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section">
+    <div class="container" style="text-align:center;max-width:700px">
+      <span class="tag reveal" style="color:#000;border-color:#000">¿Te gusta lo que ves?</span>
+      <h2 class="h2 reveal d1">Tu Moto Puede Ser la Siguiente</h2>
+      <p class="lead reveal d2" style="margin-bottom:2rem">Cuéntanos tu proyecto y haremos que tu moto luzca y funcione como nueva.</p>
+      <div class="reveal d3" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="contacto.html" class="btn btn-lg" style="background:#000;color:var(--accent);border-color:#000"><i data-lucide="message-circle"></i> Pedir Presupuesto</a>
+        <a href="servicios.html" class="btn btn-outline btn-lg" style="border-color:#000;color:#000"><i data-lucide="wrench"></i> Ver Servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-row">
+        <a href="index.html" class="logo">
+          <span class="logo-mark"><i data-lucide="bike"></i></span>
+          MotoTech
+        </a>
+        <nav class="footer-nav" aria-label="Enlaces del pie">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="galeria.html">Galería</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="social-row">
+          <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2024 MotoTech Barcelona. Todos los derechos reservados.</span>
+        <div class="footer-legal-links">
+          <a href="#">Aviso Legal</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ WHATSAPP ═══ -->
+  <a href="https://wa.me/34600000000?text=Hola%2C%20quiero%20información%20sobre%20vuestros%20servicios" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

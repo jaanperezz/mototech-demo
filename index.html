@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MotoTech Barcelona — Taller de Motos de Confianza</title>
+  <meta name="description" content="Taller de reparación de motos en Barcelona. Más de 20 años de experiencia en mantenimiento, diagnóstico, ITV y personalización. Presupuesto sin compromiso." />
+  <meta name="keywords" content="taller motos Barcelona, reparación motos, mantenimiento moto, ITV moto, mecánico motos" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MotoTech Barcelona — Taller de Motos de Confianza" />
+  <meta property="og:description" content="Más de 20 años reparando motos en Barcelona. Diagnóstico, mantenimiento, ITV y personalización." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- Schema.org MotorcycleRepair -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MotorcycleRepair",
+    "name": "MotoTech Barcelona",
+    "description": "Taller de reparación y mantenimiento de motos en Barcelona. Más de 20 años de experiencia.",
+    "url": "https://mototechbarcelona.com",
+    "telephone": "+34 93 XXX XX XX",
+    "email": "info@mototechbarcelona.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer de l'Exemple, 123",
+      "addressLocality": "Barcelona",
+      "postalCode": "08001",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.3874,
+      "longitude": 2.1686
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header id="header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Navegación principal">
+        <a href="index.html" class="logo" aria-label="MotoTech Barcelona - Inicio">
+          <span class="logo-mark"><i data-lucide="bike"></i></span>
+          MotoTech
+        </a>
+        <div class="nav-primary">
+          <a href="index.html" class="nav-link active">Inicio</a>
+          <a href="servicios.html" class="nav-link">Servicios</a>
+          <a href="galeria.html" class="nav-link">Galería</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+        <div class="nav-actions">
+          <a href="tel:+34930000000" class="nav-phone"><i data-lucide="phone"></i> 93 XXX XX XX</a>
+          <a href="contacto.html" class="nav-action-cta">Presupuesto</a>
+        </div>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══ MOBILE NAV ═══ -->
+  <div class="mobile-nav" aria-hidden="true">
+    <div class="mobile-overlay"></div>
+    <div class="mobile-drawer" role="dialog" aria-label="Menú de navegación">
+      <div class="drawer-header">
+        <span class="logo" style="font-size:1.1rem">
+          <span class="logo-mark" style="width:30px;height:30px"><i data-lucide="bike" style="width:14px;height:14px"></i></span>
+          MotoTech
+        </span>
+        <button class="close-drawer" aria-label="Cerrar menú"><i data-lucide="x" style="width:20px;height:20px"></i></button>
+      </div>
+      <a href="index.html" class="drawer-link"><i data-lucide="home"></i> Inicio</a>
+      <a href="servicios.html" class="drawer-link"><i data-lucide="wrench"></i> Servicios</a>
+      <a href="galeria.html" class="drawer-link"><i data-lucide="image"></i> Galería</a>
+      <a href="contacto.html" class="drawer-link"><i data-lucide="mail"></i> Contacto</a>
+      <a href="tel:+34930000000" class="drawer-link"><i data-lucide="phone"></i> 93 XXX XX XX</a>
+      <a href="contacto.html" class="btn btn-primary" style="justify-content:center;margin-top:.75rem">Pedir Presupuesto</a>
+    </div>
+  </div>
+
+  <!-- ═══ HERO — FULL VIEWPORT, TEXT-POWERED ═══ -->
+  <section class="home-hero" id="main-content">
+    <div class="home-hero-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="container home-hero-content">
+      <div class="reveal d1">
+        <span class="tag">Taller Especializado — Barcelona</span>
+      </div>
+      <h1 class="display reveal d2" style="margin-bottom:1.25rem">Tu Taller<br>De <span class="accent">Confianza</span></h1>
+      <p class="lead reveal d3">Más de 20 años cuidando tu moto. Diagnóstico avanzado, mantenimiento experto y atención personalizada para que siempre esté a punto.</p>
+      <div class="hero-ctas reveal d4">
+        <a href="contacto.html" class="btn btn-primary btn-lg"><i data-lucide="message-circle"></i> Pedir Presupuesto</a>
+        <a href="servicios.html" class="btn btn-outline btn-lg"><i data-lucide="wrench"></i> Ver Servicios</a>
+      </div>
+      <div class="hero-tags reveal d5">
+        <span class="hero-tag">Taller certificado</span>
+        <span class="hero-tag">Presupuesto en 24h</span>
+        <span class="hero-tag">4.8 ★ Google</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MARQUEE BAR ═══ -->
+  <div class="marquee-bar" aria-hidden="true">
+    <div class="marquee-track">
+      <span><span class="marquee-dot"></span> 20+ AÑOS DE EXPERIENCIA</span>
+      <span><span class="marquee-dot"></span> 5.000+ MOTOS REPARADAS</span>
+      <span><span class="marquee-dot"></span> 4.8★ EN GOOGLE</span>
+      <span><span class="marquee-dot"></span> TALLER OFICIAL</span>
+      <span><span class="marquee-dot"></span> PRESUPUESTO EN 24H</span>
+      <span><span class="marquee-dot"></span> RECAMBIOS ORIGINALES</span>
+      <!-- Duplicate for seamless loop -->
+      <span><span class="marquee-dot"></span> 20+ AÑOS DE EXPERIENCIA</span>
+      <span><span class="marquee-dot"></span> 5.000+ MOTOS REPARADAS</span>
+      <span><span class="marquee-dot"></span> 4.8★ EN GOOGLE</span>
+      <span><span class="marquee-dot"></span> TALLER OFICIAL</span>
+      <span><span class="marquee-dot"></span> PRESUPUESTO EN 24H</span>
+      <span><span class="marquee-dot"></span> RECAMBIOS ORIGINALES</span>
+    </div>
+  </div>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section style="padding:6rem 0;background:var(--bg-section)" id="servicios">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-num reveal">// Lo que hacemos</span>
+        <h2 class="h2 reveal d1">Servicios Especializados</h2>
+        <p class="lead reveal d2" style="max-width:500px">Cuidamos cada detalle de tu moto con la experiencia y dedicación que merece.</p>
+      </div>
+      <div class="services-grid" data-stagger="100">
+        <div class="service-card">
+          <span class="service-num">01 — Diagnóstico</span>
+          <h3>Reparación y Diagnóstico</h3>
+          <p>Diagnóstico electrónico avanzado y reparaciones mecánicas completas. Identificamos y solucionamos cualquier avería.</p>
+          <span class="service-price">Desde 45€</span>
+          <a href="servicios.html" class="service-link">Ver más <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+        </div>
+        <div class="service-card">
+          <span class="service-num">02 — Preventivo</span>
+          <h3>Mantenimiento Preventivo</h3>
+          <p>Cambio de aceite, filtros, pastillas de freno, líquidos y revisión completa. Prevenir es la mejor inversión.</p>
+          <span class="service-price">Desde 60€</span>
+          <a href="servicios.html" class="service-link">Ver más <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+        </div>
+        <div class="service-card">
+          <span class="service-num">03 — ITV</span>
+          <h3>Preparación ITV</h3>
+          <p>Revisión pre-ITV completa para que pases a la primera. Ajuste de emisiones, luces, frenos y suspensión.</p>
+          <span class="service-price">Desde 35€</span>
+          <a href="servicios.html" class="service-link">Ver más <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+        </div>
+        <div class="service-card">
+          <span class="service-num">04 — Custom</span>
+          <h3>Personalización y Tuning</h3>
+          <p>Escapes, suspensiones, estética y mejoras de rendimiento. Hacemos que tu moto sea única.</p>
+          <span class="service-price">Consultar</span>
+          <a href="servicios.html" class="service-link">Ver más <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT SPLIT ═══ -->
+  <section style="padding:6rem 0">
+    <div class="container">
+      <div class="split-section">
+        <div class="split-image-placeholder reveal left">
+          <i data-lucide="image"></i>
+          <span>Foto del taller / equipo</span>
+        </div>
+        <div>
+          <span class="sec-num reveal">// Por qué elegirnos</span>
+          <h2 class="h2 reveal d1" style="margin-bottom:1rem">Mecánicos de Confianza, Resultados Garantizados</h2>
+          <p class="lead reveal d2" style="margin-bottom:1.5rem">No somos un taller más. Combinamos experiencia, tecnología y pasión por las motos para ofrecer un servicio excepcional.</p>
+          <ul class="check-list reveal d3">
+            <li>Diagnóstico electrónico con equipos de última generación</li>
+            <li>Recambios originales y de primeras marcas</li>
+            <li>Presupuesto detallado y sin compromiso en 24 horas</li>
+            <li>Mecánicos certificados con formación continua</li>
+            <li>Garantía en todas las reparaciones</li>
+            <li>Servicio de recogida y entrega disponible</li>
+          </ul>
+          <div style="margin-top:2rem" class="reveal d4">
+            <a href="contacto.html" class="btn btn-primary"><i data-lucide="message-circle"></i> Contactar Ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STATS INLINE ═══ -->
+  <section style="border-top:2px solid var(--border);border-bottom:2px solid var(--border)">
+    <div class="container">
+      <div class="stats-inline" data-stagger="100">
+        <div class="stat-item">
+          <div class="stat-num" data-count="20" data-suffix="+">0+</div>
+          <div class="stat-label">Años de experiencia</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="5000" data-suffix="+">0+</div>
+          <div class="stat-label">Motos reparadas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="98" data-suffix="%">0%</div>
+          <div class="stat-label">Clientes satisfechos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="24" data-suffix="h">0h</div>
+          <div class="stat-label">Presupuesto express</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GALLERY — HORIZONTAL SCROLL ═══ -->
+  <section class="gallery-scroll-section" style="background:var(--bg-section)">
+    <div class="gallery-scroll-header">
+      <div>
+        <span class="sec-num reveal">// Nuestro trabajo</span>
+        <h2 class="h2 reveal d1">Galería de Trabajos</h2>
+      </div>
+      <a href="galeria.html" class="btn btn-outline btn-sm reveal d2"><i data-lucide="arrow-right" style="width:14px;height:14px"></i> Ver todo</a>
+    </div>
+    <div class="gallery-scroll-track">
+      <div class="gallery-scroll-card">
+        <div class="gallery-scroll-bg gp-1">Foto trabajo 1</div>
+        <div class="gallery-scroll-caption">
+          <small>Reparación</small>
+          <span>Restauración motor Yamaha MT-07</span>
+        </div>
+      </div>
+      <div class="gallery-scroll-card">
+        <div class="gallery-scroll-bg gp-2">Foto trabajo 2</div>
+        <div class="gallery-scroll-caption">
+          <small>Custom</small>
+          <span>Escape Akrapovic BMW R nineT</span>
+        </div>
+      </div>
+      <div class="gallery-scroll-card">
+        <div class="gallery-scroll-bg gp-3">Foto trabajo 3</div>
+        <div class="gallery-scroll-caption">
+          <small>Mantenimiento</small>
+          <span>Revisión completa Honda CB650R</span>
+        </div>
+      </div>
+      <div class="gallery-scroll-card">
+        <div class="gallery-scroll-bg gp-4">Foto trabajo 4</div>
+        <div class="gallery-scroll-caption">
+          <small>ITV</small>
+          <span>Preparación ITV Kawasaki Z900</span>
+        </div>
+      </div>
+      <div class="gallery-scroll-card">
+        <div class="gallery-scroll-bg gp-5">Foto trabajo 5</div>
+        <div class="gallery-scroll-caption">
+          <small>Custom</small>
+          <span>Personalización Ducati Scrambler</span>
+        </div>
+      </div>
+      <div class="gallery-scroll-card">
+        <div class="gallery-scroll-bg gp-6">Foto trabajo 6</div>
+        <div class="gallery-scroll-caption">
+          <small>Racing</small>
+          <span>Suspensión Ohlins KTM Duke 390</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section style="padding:6rem 0">
+    <div class="container">
+      <div class="sec-header center">
+        <span class="sec-num reveal">// Opiniones reales</span>
+        <h2 class="h2 reveal d1">Lo Que Dicen Nuestros Clientes</h2>
+        <p class="lead reveal d2">Más de 120 reseñas en Google con una valoración media de 4.8 estrellas.</p>
+      </div>
+      <div class="testimonials-grid" data-stagger="120">
+        <div class="testimonial">
+          <div class="t-quote">&ldquo;</div>
+          <p class="t-text">Llevé mi BMW R1250GS con un problema eléctrico que nadie encontraba. En MotoTech lo diagnosticaron en una hora y me la devolvieron perfecta al día siguiente. Trato impecable.</p>
+          <div class="t-author">
+            <div class="t-avatar">MG</div>
+            <div>
+              <div class="t-name">Marc García</div>
+              <div class="t-stars">★★★★★</div>
+              <div class="t-detail">Google Reviews</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="t-quote">&ldquo;</div>
+          <p class="t-text">Llevo 8 años trayendo todas mis motos aquí. Son honestos, rápidos y los precios son justos. El mejor taller de Barcelona sin duda. Me hicieron un custom en el escape que suena brutal.</p>
+          <div class="t-author">
+            <div class="t-avatar">LP</div>
+            <div>
+              <div class="t-name">Laura Puig</div>
+              <div class="t-stars">★★★★★</div>
+              <div class="t-detail">Google Reviews</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="t-quote">&ldquo;</div>
+          <p class="t-text">Prepararon mi Kawasaki para la ITV y pasó a la primera. Además me avisaron de un desgaste en las pastillas que podía haber sido peligroso. Profesionales de verdad.</p>
+          <div class="t-author">
+            <div class="t-avatar">JR</div>
+            <div>
+              <div class="t-name">Jordi Ruiz</div>
+              <div class="t-stars">★★★★★</div>
+              <div class="t-detail">Google Reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA + FORM — FULL ORANGE BG ═══ -->
+  <section class="cta-section" id="contacto">
+    <div class="container">
+      <div class="cta-grid">
+        <div>
+          <span class="sec-num reveal" style="color:rgba(0,0,0,.4)">// Contacta con nosotros</span>
+          <h2 class="h2 reveal d1">¿Tu moto necesita atención?</h2>
+          <p class="lead reveal d2" style="margin-bottom:2.5rem">Cuéntanos qué le pasa a tu moto y te daremos un presupuesto sin compromiso en menos de 24 horas.</p>
+          <div class="reveal d3">
+            <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;color:rgba(0,0,0,.6)">
+              <i data-lucide="map-pin" style="width:18px;height:18px;flex-shrink:0;color:#000"></i>
+              <span style="font-size:.9rem">Carrer de l'Exemple, 123 — 08001 Barcelona</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;color:rgba(0,0,0,.6)">
+              <i data-lucide="phone" style="width:18px;height:18px;flex-shrink:0;color:#000"></i>
+              <span style="font-size:.9rem">93 XXX XX XX</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:.75rem;color:rgba(0,0,0,.6)">
+              <i data-lucide="clock" style="width:18px;height:18px;flex-shrink:0;color:#000"></i>
+              <span style="font-size:.9rem">Lun-Vie 9:00-19:00 · Sáb 9:00-14:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="cta-form-card reveal d2">
+          <form data-form="Homepage CTA">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cta-nombre">Nombre</label>
+                <input type="text" id="cta-nombre" name="nombre" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label for="cta-email">Email</label>
+                <input type="email" id="cta-email" name="email" placeholder="tu@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cta-telefono">Teléfono</label>
+              <input type="tel" id="cta-telefono" name="telefono" placeholder="600 000 000" />
+            </div>
+            <div class="form-group">
+              <label for="cta-mensaje">¿Qué necesita tu moto?</label>
+              <textarea id="cta-mensaje" name="mensaje" placeholder="Describe la avería o servicio que necesitas..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">
+              <i data-lucide="send"></i> Solicitar Presupuesto
+            </button>
+            <p class="form-privacy" style="color:var(--text-muted)">Al enviar, aceptas nuestra <a href="#">política de privacidad</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER — MINIMAL ═══ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-row">
+        <a href="index.html" class="logo">
+          <span class="logo-mark"><i data-lucide="bike"></i></span>
+          MotoTech
+        </a>
+        <nav class="footer-nav" aria-label="Enlaces del pie">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="galeria.html">Galería</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="social-row">
+          <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2024 MotoTech Barcelona. Todos los derechos reservados.</span>
+        <div class="footer-legal-links">
+          <a href="#">Aviso Legal</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ WHATSAPP ═══ -->
+  <a href="https://wa.me/34600000000?text=Hola%2C%20quiero%20información%20sobre%20vuestros%20servicios" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios — MotoTech Barcelona</title>
+  <meta name="description" content="Reparación, mantenimiento, preparación ITV y personalización de motos en Barcelona. Presupuesto sin compromiso." />
+
+  <meta property="og:title" content="Servicios — MotoTech Barcelona" />
+  <meta property="og:description" content="Todos nuestros servicios de reparación y mantenimiento de motos en Barcelona." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header id="header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Navegación principal">
+        <a href="index.html" class="logo" aria-label="MotoTech Barcelona - Inicio">
+          <span class="logo-mark"><i data-lucide="bike"></i></span>
+          MotoTech
+        </a>
+        <div class="nav-primary">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="servicios.html" class="nav-link active">Servicios</a>
+          <a href="galeria.html" class="nav-link">Galería</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+        <div class="nav-actions">
+          <a href="tel:+34930000000" class="nav-phone"><i data-lucide="phone"></i> 93 XXX XX XX</a>
+          <a href="contacto.html" class="nav-action-cta">Presupuesto</a>
+        </div>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══ MOBILE NAV ═══ -->
+  <div class="mobile-nav" aria-hidden="true">
+    <div class="mobile-overlay"></div>
+    <div class="mobile-drawer" role="dialog" aria-label="Menú de navegación">
+      <div class="drawer-header">
+        <span class="logo" style="font-size:1.1rem">
+          <span class="logo-mark" style="width:30px;height:30px"><i data-lucide="bike" style="width:14px;height:14px"></i></span>
+          MotoTech
+        </span>
+        <button class="close-drawer" aria-label="Cerrar menú"><i data-lucide="x" style="width:20px;height:20px"></i></button>
+      </div>
+      <a href="index.html" class="drawer-link"><i data-lucide="home"></i> Inicio</a>
+      <a href="servicios.html" class="drawer-link"><i data-lucide="wrench"></i> Servicios</a>
+      <a href="galeria.html" class="drawer-link"><i data-lucide="image"></i> Galería</a>
+      <a href="contacto.html" class="drawer-link"><i data-lucide="mail"></i> Contacto</a>
+      <a href="tel:+34930000000" class="drawer-link"><i data-lucide="phone"></i> 93 XXX XX XX</a>
+      <a href="contacto.html" class="btn btn-primary" style="justify-content:center;margin-top:.75rem">Pedir Presupuesto</a>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <nav class="breadcrumb reveal d1" aria-label="Migas de pan">
+        <a href="index.html">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Servicios</span>
+      </nav>
+      <span class="tag reveal d2">Todo para tu moto</span>
+      <h1 class="h1 reveal d3">Nuestros Servicios</h1>
+      <p class="lead reveal d4" style="max-width:560px">Reparación, mantenimiento, ITV y personalización. Todo lo que tu moto necesita, bajo un mismo techo.</p>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICE DETAILS ═══ -->
+  <section style="padding:5rem 0">
+    <div class="container">
+
+      <!-- Service 1 -->
+      <div class="service-detail reveal" id="reparacion">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem">
+          <div class="service-icon"><i data-lucide="wrench"></i></div>
+          <div>
+            <span class="service-num" style="margin-bottom:.15rem">01 — Diagnóstico</span>
+            <h3>Reparación y Diagnóstico</h3>
+            <span class="service-price">Desde 45€</span>
+          </div>
+        </div>
+        <p>Contamos con equipos de diagnóstico electrónico de última generación para identificar cualquier avería de forma rápida y precisa. Desde problemas eléctricos hasta averías mecánicas complejas, nuestros técnicos tienen la experiencia y las herramientas para resolverlo.</p>
+        <h4 style="font-family:var(--font-heading);font-size:.8rem;font-weight:700;margin-bottom:.75rem;color:var(--text);letter-spacing:.08em;text-transform:uppercase">Incluye:</h4>
+        <ul class="service-includes">
+          <li><i data-lucide="check"></i> Diagnóstico electrónico completo</li>
+          <li><i data-lucide="check"></i> Lectura y borrado de códigos de error</li>
+          <li><i data-lucide="check"></i> Reparaciones del motor</li>
+          <li><i data-lucide="check"></i> Sistema eléctrico y cableado</li>
+          <li><i data-lucide="check"></i> Transmisión y embrague</li>
+          <li><i data-lucide="check"></i> Sistema de refrigeración</li>
+          <li><i data-lucide="check"></i> Inyección y carburación</li>
+          <li><i data-lucide="check"></i> Informe detallado post-reparación</li>
+        </ul>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-detail reveal" id="mantenimiento">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem">
+          <div class="service-icon"><i data-lucide="shield-check"></i></div>
+          <div>
+            <span class="service-num" style="margin-bottom:.15rem">02 — Preventivo</span>
+            <h3>Mantenimiento Preventivo</h3>
+            <span class="service-price">Desde 60€</span>
+          </div>
+        </div>
+        <p>El mantenimiento regular es la mejor inversión para alargar la vida de tu moto y evitar averías costosas. Seguimos las recomendaciones del fabricante y adaptamos el servicio a tu modelo y estilo de conducción.</p>
+        <h4 style="font-family:var(--font-heading);font-size:.8rem;font-weight:700;margin-bottom:.75rem;color:var(--text);letter-spacing:.08em;text-transform:uppercase">Incluye:</h4>
+        <ul class="service-includes">
+          <li><i data-lucide="check"></i> Cambio de aceite y filtro</li>
+          <li><i data-lucide="check"></i> Revisión de frenos y pastillas</li>
+          <li><i data-lucide="check"></i> Comprobación de niveles (líquidos)</li>
+          <li><i data-lucide="check"></i> Tensión y estado de la cadena</li>
+          <li><i data-lucide="check"></i> Revisión de neumáticos y presiones</li>
+          <li><i data-lucide="check"></i> Verificación de luces y eléctricos</li>
+          <li><i data-lucide="check"></i> Engrase de puntos críticos</li>
+          <li><i data-lucide="check"></i> Checklist completo de 25 puntos</li>
+        </ul>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-detail reveal" id="itv">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem">
+          <div class="service-icon"><i data-lucide="clipboard-check"></i></div>
+          <div>
+            <span class="service-num" style="margin-bottom:.15rem">03 — ITV</span>
+            <h3>Preparación ITV</h3>
+            <span class="service-price">Desde 35€</span>
+          </div>
+        </div>
+        <p>No te la juegues con la ITV. Nuestra revisión pre-ITV cubre todos los puntos que comprueban en la inspección para que vayas con la tranquilidad de que pasarás a la primera. Si encontramos algo que corregir, te lo solucionamos antes.</p>
+        <h4 style="font-family:var(--font-heading);font-size:.8rem;font-weight:700;margin-bottom:.75rem;color:var(--text);letter-spacing:.08em;text-transform:uppercase">Incluye:</h4>
+        <ul class="service-includes">
+          <li><i data-lucide="check"></i> Revisión de emisiones (gases)</li>
+          <li><i data-lucide="check"></i> Comprobación de todas las luces</li>
+          <li><i data-lucide="check"></i> Ajuste y verificación de frenos</li>
+          <li><i data-lucide="check"></i> Estado de suspensión y dirección</li>
+          <li><i data-lucide="check"></i> Revisión de neumáticos (desgaste, presión)</li>
+          <li><i data-lucide="check"></i> Nivel de ruido (escape homologado)</li>
+          <li><i data-lucide="check"></i> Verificación de holguras</li>
+          <li><i data-lucide="check"></i> Correcciones incluidas (si son menores)</li>
+        </ul>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-detail reveal" id="custom">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem">
+          <div class="service-icon"><i data-lucide="settings"></i></div>
+          <div>
+            <span class="service-num" style="margin-bottom:.15rem">04 — Custom</span>
+            <h3>Personalización y Tuning</h3>
+            <span class="service-price">Consultar presupuesto</span>
+          </div>
+        </div>
+        <p>Haz que tu moto refleje tu personalidad. Desde cambios de escape hasta modificaciones estéticas completas, pasando por mejoras de rendimiento y ergonomía. Trabajamos con las mejores marcas del mercado para conseguir el resultado que imaginas.</p>
+        <h4 style="font-family:var(--font-heading);font-size:.8rem;font-weight:700;margin-bottom:.75rem;color:var(--text);letter-spacing:.08em;text-transform:uppercase">Incluye:</h4>
+        <ul class="service-includes">
+          <li><i data-lucide="check"></i> Escapes deportivos y homologados</li>
+          <li><i data-lucide="check"></i> Suspensiones regulables</li>
+          <li><i data-lucide="check"></i> Manillares y estriberas</li>
+          <li><i data-lucide="check"></i> Iluminación LED</li>
+          <li><i data-lucide="check"></i> Vinilos y pintura personalizada</li>
+          <li><i data-lucide="check"></i> Centralitas y mapas de inyección</li>
+          <li><i data-lucide="check"></i> Protecciones y sliders</li>
+          <li><i data-lucide="check"></i> Asesoramiento sobre homologación</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS ═══ -->
+  <section style="padding:5rem 0;background:var(--bg-section);border-top:2px solid var(--border);border-bottom:2px solid var(--border)">
+    <div class="container">
+      <div class="sec-header center">
+        <span class="sec-num reveal">// Así trabajamos</span>
+        <h2 class="h2 reveal d1">Proceso Simple y Transparente</h2>
+        <p class="lead reveal d2">Desde la consulta inicial hasta la entrega, te mantenemos informado en cada paso.</p>
+      </div>
+      <div class="process-steps" data-stagger="150">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-title">Consulta</div>
+          <div class="step-desc">Cuéntanos qué necesita tu moto por teléfono, WhatsApp o en persona. Te damos un presupuesto orientativo en menos de 24h.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-title">Diagnóstico</div>
+          <div class="step-desc">Revisamos tu moto a fondo con nuestros equipos. Te enviamos un presupuesto detallado con fotos antes de tocar nada.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-title">Entrega</div>
+          <div class="step-desc">Realizamos el trabajo y te avisamos cuando esté lista. Recogida en taller o te la llevamos a domicilio.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section style="padding:5rem 0">
+    <div class="container" style="max-width:800px">
+      <div class="sec-header center">
+        <span class="sec-num reveal">// Dudas frecuentes</span>
+        <h2 class="h2 reveal d1">Preguntas Frecuentes</h2>
+      </div>
+      <div class="reveal d2">
+        <div class="accordion-item">
+          <button class="accordion-btn">
+            ¿Cuánto tarda una reparación?
+            <i data-lucide="plus" class="icon"></i>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">Depende del tipo de reparación. Un mantenimiento básico suele estar listo en el día. Reparaciones más complejas pueden requerir 2-5 días laborables. Siempre te informamos del plazo estimado antes de empezar y te avisamos si surge cualquier imprevisto.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">
+            ¿Trabajáis con todas las marcas de motos?
+            <i data-lucide="plus" class="icon"></i>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">Sí, trabajamos con todas las marcas: Honda, Yamaha, Kawasaki, Suzuki, BMW, Ducati, KTM, Triumph, Harley-Davidson, Aprilia, y muchas más. Tanto motos de calle como scooters y motos de competición.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">
+            ¿Usáis recambios originales?
+            <i data-lucide="plus" class="icon"></i>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">Trabajamos tanto con recambios originales (OEM) como con piezas de primeras marcas equivalentes. Siempre te consultamos antes y te explicamos las opciones disponibles con sus diferencias de precio y calidad.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">
+            ¿Ofrecéis garantía en las reparaciones?
+            <i data-lucide="plus" class="icon"></i>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">Sí, todas nuestras reparaciones tienen garantía. La mano de obra tiene 6 meses de garantía y las piezas mantienen la garantía del fabricante (normalmente 1-2 años). Te lo detallamos todo en la factura.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">
+            ¿Tenéis servicio de recogida de motos?
+            <i data-lucide="plus" class="icon"></i>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">Sí, ofrecemos servicio de recogida y entrega en Barcelona ciudad y alrededores. El coste depende de la distancia, pero para clientes habituales suele ser gratuito dentro del área metropolitana. Consúltanos.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">
+            ¿Puedo ver el presupuesto antes de que empecéis?
+            <i data-lucide="plus" class="icon"></i>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">Por supuesto. Nunca realizamos ningún trabajo sin tu aprobación previa. Te enviamos un presupuesto detallado con el desglose de piezas y mano de obra, y solo empezamos cuando nos das el visto bueno. Sin sorpresas.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section">
+    <div class="container" style="text-align:center;max-width:700px">
+      <span class="tag reveal" style="color:#000;border-color:#000">¿Listo para empezar?</span>
+      <h2 class="h2 reveal d1">Pide Tu Presupuesto Sin Compromiso</h2>
+      <p class="lead reveal d2" style="margin-bottom:2rem">Cuéntanos qué necesita tu moto y te respondemos en menos de 24 horas.</p>
+      <div class="reveal d3" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="contacto.html" class="btn btn-lg" style="background:#000;color:var(--accent);border-color:#000"><i data-lucide="message-circle"></i> Contactar</a>
+        <a href="tel:+34930000000" class="btn btn-outline btn-lg" style="border-color:#000;color:#000"><i data-lucide="phone"></i> Llamar Ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-row">
+        <a href="index.html" class="logo">
+          <span class="logo-mark"><i data-lucide="bike"></i></span>
+          MotoTech
+        </a>
+        <nav class="footer-nav" aria-label="Enlaces del pie">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="galeria.html">Galería</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="social-row">
+          <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2024 MotoTech Barcelona. Todos los derechos reservados.</span>
+        <div class="footer-legal-links">
+          <a href="#">Aviso Legal</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ WHATSAPP ═══ -->
+  <a href="https://wa.me/34600000000?text=Hola%2C%20quiero%20información%20sobre%20vuestros%20servicios" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
