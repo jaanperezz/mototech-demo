@@ -4,20 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MotoTech Barcelona — Taller de Motos de Confianza</title>
-  <meta name="description" content="Taller de reparación de motos en Barcelona. Más de 20 años de experiencia en mantenimiento, diagnóstico, ITV y personalización. Presupuesto sin compromiso." />
+  <meta name="description" content="Taller de reparación de motos en Barcelona. Más de 25 años de experiencia en mantenimiento, diagnóstico, ITV y personalización. Presupuesto sin compromiso." />
   <meta name="keywords" content="taller motos Barcelona, reparación motos, mantenimiento moto, ITV moto, mecánico motos" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="MotoTech Barcelona — Taller de Motos de Confianza" />
-  <meta property="og:description" content="Más de 20 años reparando motos en Barcelona. Diagnóstico, mantenimiento, ITV y personalización." />
+  <meta property="og:description" content="Más de 25 años reparando motos en Barcelona. Diagnóstico, mantenimiento, ITV y personalización." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
 
   <!-- Schema.org MotorcycleRepair -->
   <script type="application/ld+json">
@@ -25,7 +24,7 @@
     "@context": "https://schema.org",
     "@type": "MotorcycleRepair",
     "name": "MotoTech Barcelona",
-    "description": "Taller de reparación y mantenimiento de motos en Barcelona. Más de 20 años de experiencia.",
+    "description": "Taller de reparación y mantenimiento de motos en Barcelona. Más de 25 años de experiencia.",
     "url": "https://mototechbarcelona.com",
     "telephone": "+34 93 XXX XX XX",
     "email": "info@mototechbarcelona.com",
@@ -52,382 +51,1402 @@
     }
   }
   </script>
+
+<style>
+/* ══════════════════════════════════════════════
+   RESET & BASE
+   ══════════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0A0A0A;
+  --bg-card: #111111;
+  --bg-elevated: #161616;
+  --orange: #FF6B00;
+  --lime: #BAFF29;
+  --white: #F0F0F0;
+  --grey: #888888;
+  --grey-dim: #444444;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange) var(--bg);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--white);
+  overflow-x: hidden;
+  cursor: none;
+  line-height: 1.6;
+}
+
+/* Grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { background: none; border: none; color: inherit; font: inherit; cursor: none; }
+ul { list-style: none; }
+
+/* ══════════════════════════════════════════════
+   CUSTOM CURSOR
+   ══════════════════════════════════════════════ */
+.cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 20px; height: 20px;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transition: width .3s, height .3s, border-color .3s, background .3s, transform .05s linear;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+.cursor.expand {
+  width: 60px; height: 60px;
+  background: rgba(255, 107, 0, .15);
+  border-color: var(--lime);
+}
+
+@media (hover: none) {
+  .cursor { display: none; }
+  body { cursor: auto; }
+  body * { cursor: auto; }
+}
+
+/* ══════════════════════════════════════════════
+   HEADER — mix-blend-mode: difference
+   ══════════════════════════════════════════════ */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  mix-blend-mode: difference;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.header-logo .dot {
+  width: 8px; height: 8px;
+  background: var(--orange);
+  border-radius: 50%;
+  display: inline-block;
+}
+.header-nav { display: flex; gap: 2rem; align-items: center; }
+.header-nav a {
+  font-family: var(--font-body);
+  font-size: .85rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  transition: opacity .3s;
+}
+.header-nav a:hover { opacity: .6; }
+.header-cta {
+  font-family: var(--font-heading);
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: .6rem 1.5rem;
+  clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+  background: var(--white);
+  color: var(--bg);
+  transition: background .3s, color .3s;
+}
+.header-cta:hover { background: var(--orange); color: var(--white); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px;
+  padding: 4px 0;
+}
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--white);
+  transition: transform .3s, opacity .3s;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile nav */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,10,.97);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s;
+}
+.mobile-menu.open { opacity: 1; pointer-events: all; }
+.mobile-menu a {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  transition: color .3s;
+}
+.mobile-menu a:hover { color: var(--orange); }
+
+@media (max-width: 768px) {
+  .header-nav, .header-cta { display: none; }
+  .hamburger { display: flex; }
+}
+
+/* ══════════════════════════════════════════════
+   HERO — SPLIT DIAGONAL
+   ══════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 4rem 4rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+.hero-tag {
+  font-family: var(--font-body);
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: var(--orange);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.hero-tag::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--orange);
+}
+.hero-headline {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.hero-headline .word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  margin-right: .3em;
+}
+.hero-headline .word-inner {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform .7s cubic-bezier(.16, 1, .3, 1);
+}
+.hero-headline .word-inner.visible { transform: translateY(0); }
+.hero-headline .accent { color: var(--orange); }
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--grey);
+  max-width: 440px;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-angular {
+  font-family: var(--font-heading);
+  font-size: .85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: 1rem 2.2rem;
+  clip-path: polygon(6% 0%, 100% 0%, 94% 100%, 0% 100%);
+  transition: background .3s, color .3s, transform .3s;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+.btn-angular:hover { transform: skewX(-2deg) scale(1.03); }
+.btn-primary-a { background: var(--orange); color: #fff; }
+.btn-primary-a:hover { background: #e05e00; }
+.btn-outline-a {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--grey-dim);
+  clip-path: polygon(6% 0%, 100% 0%, 94% 100%, 0% 100%);
+}
+.btn-outline-a:hover { border-color: var(--orange); color: var(--orange); }
+
+/* Hero image side */
+.hero-right {
+  width: 45%;
+  position: relative;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--grey-dim);
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.hero-img-placeholder svg {
+  width: 60px;
+  height: 60px;
+  stroke: var(--grey-dim);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 4rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .75rem;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  z-index: 3;
+}
+.scroll-hint .line {
+  width: 40px;
+  height: 1px;
+  background: var(--grey-dim);
+  position: relative;
+  overflow: hidden;
+}
+.scroll-hint .line::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: var(--orange);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse { 0%,100%{left:-100%} 50%{left:0} }
+
+@media (max-width: 768px) {
+  .hero { flex-direction: column; }
+  .hero-left { padding: 7rem 1.5rem 3rem; }
+  .hero-right {
+    width: 100%;
+    height: 50vh;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .scroll-hint { left: 1.5rem; }
+}
+
+/* ══════════════════════════════════════════════
+   MARQUEE
+   ══════════════════════════════════════════════ */
+.marquee {
+  border-top: 1px solid var(--grey-dim);
+  border-bottom: 1px solid var(--grey-dim);
+  padding: 1.2rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  gap: 3rem;
+  animation: marqueeScroll 20s linear infinite;
+}
+.marquee-track span {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--grey);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+.marquee-track .sep {
+  color: var(--orange);
+  font-size: 1.4rem;
+}
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════════════════════
+   STATS — OVERSIZED
+   ══════════════════════════════════════════════ */
+.stats {
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.stat {
+  border-top: 1px solid var(--grey-dim);
+  padding: 2rem 1rem 0;
+  transition: transform .4s;
+}
+.stat:hover { transform: translateY(-8px); }
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.04em;
+  color: var(--white);
+  transition: color .3s;
+}
+.stat:hover .stat-number { color: var(--orange); }
+.stat-label {
+  font-size: .85rem;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-top: .5rem;
+}
+
+@media (max-width: 768px) {
+  .stats { grid-template-columns: 1fr; gap: 1rem; padding: 3rem 1.5rem; }
+  .stat-number { font-size: 4rem; }
+}
+
+/* ══════════════════════════════════════════════
+   SERVICES — HORIZONTAL DRAG SCROLL
+   ══════════════════════════════════════════════ */
+.services-section {
+  padding: 5rem 0 5rem;
+  overflow: hidden;
+}
+.services-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+}
+.section-label {
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: var(--orange);
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--orange);
+}
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px var(--white);
+  color: transparent;
+}
+.services-track {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.services-track:active { cursor: grabbing; }
+.services-track.dragging { cursor: grabbing; }
+.services-track.dragging .service-card { pointer-events: none; }
+.service-card {
+  flex: 0 0 320px;
+  min-height: 420px;
+  background: var(--bg-card);
+  border: 1px solid var(--grey-dim);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform .5s cubic-bezier(.16,1,.3,1), border-color .3s;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .4s;
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover { border-color: var(--orange); }
+.service-num {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--bg-elevated);
+  -webkit-text-stroke: 1px var(--grey-dim);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  transition: -webkit-text-stroke-color .3s;
+}
+.service-card:hover .service-num { -webkit-text-stroke-color: var(--orange); }
+.service-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+  stroke: var(--orange);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.service-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+.service-card p {
+  font-size: .9rem;
+  color: var(--grey);
+  line-height: 1.6;
+  flex: 1;
+}
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--orange);
+  margin-top: 1.5rem;
+  transition: gap .3s;
+}
+.service-link:hover { gap: .8rem; }
+.service-link .arrow { transition: transform .3s; }
+.service-link:hover .arrow { transform: translateX(4px); }
+
+@media (max-width: 768px) {
+  .service-card { flex: 0 0 280px; min-height: 380px; }
+  .services-header { padding: 0 1.5rem 2rem; }
+  .services-track { padding: 0 1.5rem; }
+}
+
+/* ══════════════════════════════════════════════
+   WHY US — STICKY SPLIT
+   ══════════════════════════════════════════════ */
+.why-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.why-left {
+  position: sticky;
+  top: 8rem;
+  align-self: start;
+}
+.why-left h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  margin-bottom: 1.5rem;
+}
+.why-left h2 .accent { color: var(--orange); }
+.why-left p {
+  color: var(--grey);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 380px;
+}
+.why-features { display: flex; flex-direction: column; gap: 1rem; }
+.why-feature {
+  display: flex; gap: .75rem; align-items: flex-start;
+  font-size: .9rem; color: var(--grey);
+}
+.why-feature .check {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  border: 1px solid var(--orange);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--orange);
+  font-size: .7rem;
+  margin-top: 2px;
+}
+.why-right { display: flex; flex-direction: column; gap: 2rem; }
+.why-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--bg-card);
+  border: 1px solid var(--grey-dim);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  color: var(--grey-dim);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.why-img-placeholder svg {
+  width: 40px; height: 40px;
+  stroke: var(--grey-dim); fill: none;
+  stroke-width: 1.5;
+}
+
+@media (max-width: 768px) {
+  .why-section { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+  .why-left { position: static; }
+}
+
+/* ══════════════════════════════════════════════
+   REVIEWS — STAGGERED
+   ══════════════════════════════════════════════ */
+.reviews-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.reviews-header { margin-bottom: 3rem; }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+.review-card {
+  background: var(--bg-card);
+  border: 1px solid var(--grey-dim);
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: border-color .3s, transform .4s;
+}
+.review-card:hover { border-color: var(--orange); transform: translateY(-4px); }
+.review-card:nth-child(2) { margin-top: 3rem; }
+.review-quote {
+  font-family: var(--font-heading);
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--orange);
+  opacity: .2;
+  line-height: .8;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+.review-text {
+  font-style: italic;
+  font-size: .95rem;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.review-author { display: flex; align-items: center; gap: .75rem; }
+.review-avatar {
+  width: 40px; height: 40px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--grey-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--orange);
+}
+.review-name {
+  font-family: var(--font-heading);
+  font-size: .85rem;
+  font-weight: 700;
+}
+.review-stars { color: var(--orange); font-size: .75rem; }
+.review-source { font-size: .7rem; color: var(--grey); text-transform: uppercase; letter-spacing: .08em; }
+
+@media (max-width: 768px) {
+  .reviews-grid { grid-template-columns: 1fr; }
+  .review-card:nth-child(2) { margin-top: 0; }
+  .reviews-section { padding: 4rem 1.5rem; }
+}
+
+/* ══════════════════════════════════════════════
+   LOCATION — ASYMMETRIC
+   ══════════════════════════════════════════════ */
+.location-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3rem;
+  align-items: start;
+}
+.location-info { display: flex; flex-direction: column; gap: 2rem; }
+.location-block {
+  border-left: 2px solid var(--grey-dim);
+  padding-left: 1.5rem;
+  transition: border-color .3s;
+}
+.location-block:hover { border-color: var(--orange); }
+.location-block h4 {
+  font-family: var(--font-heading);
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--orange);
+  margin-bottom: .5rem;
+}
+.location-block p { font-size: .9rem; color: var(--grey); line-height: 1.6; }
+.map-placeholder {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: var(--bg-card);
+  border: 1px solid var(--grey-dim);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  color: var(--grey-dim);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.map-placeholder svg {
+  width: 50px; height: 50px;
+  stroke: var(--grey-dim); fill: none;
+  stroke-width: 1.5;
+}
+
+@media (max-width: 768px) {
+  .location-section { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
+}
+
+/* ══════════════════════════════════════════════
+   CTA — MASSIVE TEXT-STROKE
+   ══════════════════════════════════════════════ */
+.cta-section {
+  padding: 8rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(255,107,0,.06) 0%, transparent 70%);
+}
+.cta-headline {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  -webkit-text-stroke: 2px var(--white);
+  color: transparent;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.cta-headline .filled {
+  -webkit-text-stroke: 0;
+  color: var(--orange);
+}
+.cta-sub {
+  font-size: 1.05rem;
+  color: var(--grey);
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+  position: relative;
+}
+.cta-buttons { position: relative; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ══════════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════════ */
+.footer {
+  border-top: 1px solid var(--grey-dim);
+  padding: 4rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.footer-brand .dot {
+  width: 8px; height: 8px;
+  background: var(--orange);
+  border-radius: 50%;
+}
+.footer-desc {
+  font-size: .85rem;
+  color: var(--grey);
+  line-height: 1.6;
+  max-width: 300px;
+}
+.footer-col-title {
+  font-family: var(--font-heading);
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.footer-col a {
+  display: block;
+  font-size: .85rem;
+  color: var(--grey);
+  margin-bottom: .5rem;
+  transition: color .3s;
+}
+.footer-col a:hover { color: var(--orange); }
+.footer-bottom {
+  border-top: 1px solid var(--grey-dim);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-copy { font-size: .75rem; color: var(--grey); }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: .75rem; color: var(--grey); transition: color .3s; }
+.footer-legal a:hover { color: var(--orange); }
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer { padding: 3rem 1.5rem 1.5rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* ══════════════════════════════════════════════
+   WHATSAPP — ANGULAR
+   ══════════════════════════════════════════════ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 90;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: transform .3s, background .3s;
+}
+.whatsapp-float:hover { transform: scale(1.08); background: #20b858; }
+.whatsapp-float svg { width: 26px; height: 26px; }
+
+/* ══════════════════════════════════════════════
+   SCROLL REVEAL
+   ══════════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.from-left {
+  transform: translateX(-40px) translateY(0);
+}
+.reveal.from-right {
+  transform: translateX(40px) translateY(0);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
+
+/* ══════════════════════════════════════════════
+   3D TILT CARDS
+   ══════════════════════════════════════════════ */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+</style>
 </head>
 <body>
 
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+
   <!-- ═══ HEADER ═══ -->
-  <header id="header">
-    <div class="container">
-      <nav class="nav-inner" aria-label="Navegación principal">
-        <a href="index.html" class="logo" aria-label="MotoTech Barcelona - Inicio">
-          <span class="logo-mark"><i data-lucide="bike"></i></span>
-          MotoTech
-        </a>
-        <div class="nav-primary">
-          <a href="index.html" class="nav-link active">Inicio</a>
-          <a href="servicios.html" class="nav-link">Servicios</a>
-          <a href="galeria.html" class="nav-link">Galería</a>
-          <a href="contacto.html" class="nav-link">Contacto</a>
-        </div>
-        <div class="nav-actions">
-          <a href="tel:+34930000000" class="nav-phone"><i data-lucide="phone"></i> 93 XXX XX XX</a>
-          <a href="contacto.html" class="nav-action-cta">Presupuesto</a>
-        </div>
-        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
+  <header class="header" id="header">
+    <a href="#" class="header-logo"><span class="dot"></span>MotoTech</a>
+    <nav class="header-nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+    <a href="#contacto" class="header-cta">Presupuesto</a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <!-- ═══ MOBILE NAV ═══ -->
-  <div class="mobile-nav" aria-hidden="true">
-    <div class="mobile-overlay"></div>
-    <div class="mobile-drawer" role="dialog" aria-label="Menú de navegación">
-      <div class="drawer-header">
-        <span class="logo" style="font-size:1.1rem">
-          <span class="logo-mark" style="width:30px;height:30px"><i data-lucide="bike" style="width:14px;height:14px"></i></span>
-          MotoTech
-        </span>
-        <button class="close-drawer" aria-label="Cerrar menú"><i data-lucide="x" style="width:20px;height:20px"></i></button>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#servicios" class="mobile-link">Servicios</a>
+    <a href="#nosotros" class="mobile-link">Nosotros</a>
+    <a href="#opiniones" class="mobile-link">Opiniones</a>
+    <a href="#ubicacion" class="mobile-link">Ubicación</a>
+    <a href="#contacto" class="mobile-link" style="color:var(--orange)">Presupuesto</a>
+  </div>
+
+  <!-- ═══ HERO — SPLIT DIAGONAL ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <div class="hero-tag">Taller Especializado &mdash; Barcelona</div>
+      <h1 class="hero-headline" id="heroHeadline">
+        <span class="word"><span class="word-inner">Tu</span></span>
+        <span class="word"><span class="word-inner">Taller</span></span>
+        <span class="word"><span class="word-inner">De</span></span>
+        <span class="word"><span class="word-inner accent">Motos</span></span>
+        <span class="word"><span class="word-inner">En</span></span>
+        <span class="word"><span class="word-inner accent">Barcelona</span></span>
+      </h1>
+      <p class="hero-desc">Más de 25 años cuidando tu moto. Diagnóstico avanzado, mantenimiento experto y la atención que tu máquina merece.</p>
+      <div class="hero-ctas">
+        <a href="#contacto" class="btn-angular btn-primary-a">Pedir Presupuesto</a>
+        <a href="#servicios" class="btn-angular btn-outline-a">Ver Servicios</a>
       </div>
-      <a href="index.html" class="drawer-link"><i data-lucide="home"></i> Inicio</a>
-      <a href="servicios.html" class="drawer-link"><i data-lucide="wrench"></i> Servicios</a>
-      <a href="galeria.html" class="drawer-link"><i data-lucide="image"></i> Galería</a>
-      <a href="contacto.html" class="drawer-link"><i data-lucide="mail"></i> Contacto</a>
-      <a href="tel:+34930000000" class="drawer-link"><i data-lucide="phone"></i> 93 XXX XX XX</a>
-      <a href="contacto.html" class="btn btn-primary" style="justify-content:center;margin-top:.75rem">Pedir Presupuesto</a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-placeholder">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span>Imagen Hero</span>
+        <span style="font-size:.65rem;color:var(--grey)">1200 x 900 px</span>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span class="line"></span>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ═══ MARQUEE ═══ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>REPARACI&Oacute;N</span><span class="sep">&bull;</span>
+      <span>MANTENIMIENTO</span><span class="sep">&bull;</span>
+      <span>ITV</span><span class="sep">&bull;</span>
+      <span>CUSTOM</span><span class="sep">&bull;</span>
+      <span>NEUM&Aacute;TICOS</span><span class="sep">&bull;</span>
+      <span>DIAGNOSIS</span><span class="sep">&bull;</span>
+      <span>REPARACI&Oacute;N</span><span class="sep">&bull;</span>
+      <span>MANTENIMIENTO</span><span class="sep">&bull;</span>
+      <span>ITV</span><span class="sep">&bull;</span>
+      <span>CUSTOM</span><span class="sep">&bull;</span>
+      <span>NEUM&Aacute;TICOS</span><span class="sep">&bull;</span>
+      <span>DIAGNOSIS</span><span class="sep">&bull;</span>
     </div>
   </div>
 
-  <!-- ═══ HERO — FULL VIEWPORT, TEXT-POWERED ═══ -->
-  <section class="home-hero" id="main-content">
-    <div class="home-hero-bg"></div>
-    <div class="hero-glow"></div>
-    <div class="container home-hero-content">
-      <div class="reveal d1">
-        <span class="tag">Taller Especializado — Barcelona</span>
+  <!-- ═══ STATS ═══ -->
+  <section class="stats" id="stats">
+    <div class="stat reveal">
+      <div class="stat-number">25+</div>
+      <div class="stat-label">A&ntilde;os de experiencia</div>
+    </div>
+    <div class="stat reveal reveal-delay-1">
+      <div class="stat-number">3000+</div>
+      <div class="stat-label">Motos reparadas</div>
+    </div>
+    <div class="stat reveal reveal-delay-2">
+      <div class="stat-number">4.8&#9733;</div>
+      <div class="stat-label">Google Reviews</div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES — DRAG SCROLL ═══ -->
+  <section class="services-section" id="servicios">
+    <div class="services-header">
+      <div class="section-label reveal">Lo que hacemos</div>
+      <h2 class="section-title reveal reveal-delay-1">Servicios Especializados</h2>
+    </div>
+    <div class="services-track" id="servicesTrack">
+      <div class="service-card tilt-card reveal">
+        <div class="service-num">01</div>
+        <svg class="service-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        <h3>Reparaci&oacute;n y Diagn&oacute;stico</h3>
+        <p>Diagn&oacute;stico electr&oacute;nico avanzado y reparaciones mec&aacute;nicas completas. Identificamos cualquier aver&iacute;a con precisi&oacute;n.</p>
+        <a href="#" class="service-link">M&aacute;s info <span class="arrow">&rarr;</span></a>
       </div>
-      <h1 class="display reveal d2" style="margin-bottom:1.25rem">Tu Taller<br>De <span class="accent">Confianza</span></h1>
-      <p class="lead reveal d3">Más de 20 años cuidando tu moto. Diagnóstico avanzado, mantenimiento experto y atención personalizada para que siempre esté a punto.</p>
-      <div class="hero-ctas reveal d4">
-        <a href="contacto.html" class="btn btn-primary btn-lg"><i data-lucide="message-circle"></i> Pedir Presupuesto</a>
-        <a href="servicios.html" class="btn btn-outline btn-lg"><i data-lucide="wrench"></i> Ver Servicios</a>
+      <div class="service-card tilt-card reveal reveal-delay-1">
+        <div class="service-num">02</div>
+        <svg class="service-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Mantenimiento Preventivo</h3>
+        <p>Cambio de aceite, filtros, pastillas de freno, l&iacute;quidos y revisi&oacute;n completa. Prevenir es la mejor inversi&oacute;n.</p>
+        <a href="#" class="service-link">M&aacute;s info <span class="arrow">&rarr;</span></a>
       </div>
-      <div class="hero-tags reveal d5">
-        <span class="hero-tag">Taller certificado</span>
-        <span class="hero-tag">Presupuesto en 24h</span>
-        <span class="hero-tag">4.8 ★ Google</span>
+      <div class="service-card tilt-card reveal reveal-delay-2">
+        <div class="service-num">03</div>
+        <svg class="service-icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h3>Preparaci&oacute;n ITV</h3>
+        <p>Revisi&oacute;n pre-ITV para que pases a la primera. Ajuste de emisiones, luces, frenos y suspensi&oacute;n.</p>
+        <a href="#" class="service-link">M&aacute;s info <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card tilt-card reveal reveal-delay-3">
+        <div class="service-num">04</div>
+        <svg class="service-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <h3>Personalizaci&oacute;n Custom</h3>
+        <p>Escapes, suspensiones, est&eacute;tica y mejoras de rendimiento. Hacemos que tu moto sea &uacute;nica.</p>
+        <a href="#" class="service-link">M&aacute;s info <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card tilt-card reveal reveal-delay-4">
+        <div class="service-num">05</div>
+        <svg class="service-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <h3>Neum&aacute;ticos</h3>
+        <p>Montaje, equilibrado y venta de neum&aacute;ticos de primeras marcas. Asesoramiento personalizado seg&uacute;n tu conducci&oacute;n.</p>
+        <a href="#" class="service-link">M&aacute;s info <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card tilt-card reveal">
+        <div class="service-num">06</div>
+        <svg class="service-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <h3>Recogida y Entrega</h3>
+        <p>Recogemos tu moto en Barcelona y la devolvemos reparada. M&aacute;xima comodidad para ti.</p>
+        <a href="#" class="service-link">M&aacute;s info <span class="arrow">&rarr;</span></a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ MARQUEE BAR ═══ -->
-  <div class="marquee-bar" aria-hidden="true">
-    <div class="marquee-track">
-      <span><span class="marquee-dot"></span> 20+ AÑOS DE EXPERIENCIA</span>
-      <span><span class="marquee-dot"></span> 5.000+ MOTOS REPARADAS</span>
-      <span><span class="marquee-dot"></span> 4.8★ EN GOOGLE</span>
-      <span><span class="marquee-dot"></span> TALLER OFICIAL</span>
-      <span><span class="marquee-dot"></span> PRESUPUESTO EN 24H</span>
-      <span><span class="marquee-dot"></span> RECAMBIOS ORIGINALES</span>
-      <!-- Duplicate for seamless loop -->
-      <span><span class="marquee-dot"></span> 20+ AÑOS DE EXPERIENCIA</span>
-      <span><span class="marquee-dot"></span> 5.000+ MOTOS REPARADAS</span>
-      <span><span class="marquee-dot"></span> 4.8★ EN GOOGLE</span>
-      <span><span class="marquee-dot"></span> TALLER OFICIAL</span>
-      <span><span class="marquee-dot"></span> PRESUPUESTO EN 24H</span>
-      <span><span class="marquee-dot"></span> RECAMBIOS ORIGINALES</span>
-    </div>
-  </div>
-
-  <!-- ═══ SERVICES ═══ -->
-  <section style="padding:6rem 0;background:var(--bg-section)" id="servicios">
-    <div class="container">
-      <div class="sec-header">
-        <span class="sec-num reveal">// Lo que hacemos</span>
-        <h2 class="h2 reveal d1">Servicios Especializados</h2>
-        <p class="lead reveal d2" style="max-width:500px">Cuidamos cada detalle de tu moto con la experiencia y dedicación que merece.</p>
+  <!-- ═══ WHY US — STICKY SPLIT ═══ -->
+  <section class="why-section" id="nosotros">
+    <div class="why-left reveal from-left">
+      <div class="section-label">Por qu&eacute; elegirnos</div>
+      <h2>Mec&aacute;nicos de <span class="accent">Confianza,</span> Resultados Garantizados</h2>
+      <p>No somos un taller m&aacute;s. Combinamos experiencia, tecnolog&iacute;a y pasi&oacute;n por las motos para ofrecer un servicio excepcional.</p>
+      <div class="why-features">
+        <div class="why-feature"><span class="check">&#10003;</span> Diagn&oacute;stico con equipos de &uacute;ltima generaci&oacute;n</div>
+        <div class="why-feature"><span class="check">&#10003;</span> Recambios originales y de primeras marcas</div>
+        <div class="why-feature"><span class="check">&#10003;</span> Presupuesto detallado en 24 horas</div>
+        <div class="why-feature"><span class="check">&#10003;</span> Mec&aacute;nicos certificados con formaci&oacute;n continua</div>
+        <div class="why-feature"><span class="check">&#10003;</span> Garant&iacute;a en todas las reparaciones</div>
+        <div class="why-feature"><span class="check">&#10003;</span> Servicio de recogida y entrega</div>
       </div>
-      <div class="services-grid" data-stagger="100">
-        <div class="service-card">
-          <span class="service-num">01 — Diagnóstico</span>
-          <h3>Reparación y Diagnóstico</h3>
-          <p>Diagnóstico electrónico avanzado y reparaciones mecánicas completas. Identificamos y solucionamos cualquier avería.</p>
-          <span class="service-price">Desde 45€</span>
-          <a href="servicios.html" class="service-link">Ver más <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
-        </div>
-        <div class="service-card">
-          <span class="service-num">02 — Preventivo</span>
-          <h3>Mantenimiento Preventivo</h3>
-          <p>Cambio de aceite, filtros, pastillas de freno, líquidos y revisión completa. Prevenir es la mejor inversión.</p>
-          <span class="service-price">Desde 60€</span>
-          <a href="servicios.html" class="service-link">Ver más <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
-        </div>
-        <div class="service-card">
-          <span class="service-num">03 — ITV</span>
-          <h3>Preparación ITV</h3>
-          <p>Revisión pre-ITV completa para que pases a la primera. Ajuste de emisiones, luces, frenos y suspensión.</p>
-          <span class="service-price">Desde 35€</span>
-          <a href="servicios.html" class="service-link">Ver más <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
-        </div>
-        <div class="service-card">
-          <span class="service-num">04 — Custom</span>
-          <h3>Personalización y Tuning</h3>
-          <p>Escapes, suspensiones, estética y mejoras de rendimiento. Hacemos que tu moto sea única.</p>
-          <span class="service-price">Consultar</span>
-          <a href="servicios.html" class="service-link">Ver más <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
-        </div>
+    </div>
+    <div class="why-right">
+      <div class="why-img-placeholder reveal from-right">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Foto del taller</span>
+      </div>
+      <div class="why-img-placeholder reveal from-right reveal-delay-1">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Foto del equipo</span>
+      </div>
+      <div class="why-img-placeholder reveal from-right reveal-delay-2">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Foto de trabajo</span>
       </div>
     </div>
   </section>
 
-  <!-- ═══ ABOUT SPLIT ═══ -->
-  <section style="padding:6rem 0">
-    <div class="container">
-      <div class="split-section">
-        <div class="split-image-placeholder reveal left">
-          <i data-lucide="image"></i>
-          <span>Foto del taller / equipo</span>
+  <!-- ═══ REVIEWS — STAGGERED ═══ -->
+  <section class="reviews-section" id="opiniones">
+    <div class="reviews-header">
+      <div class="section-label reveal">Opiniones reales</div>
+      <h2 class="section-title reveal reveal-delay-1">Lo Que Dicen Nuestros Clientes</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <span class="review-quote">&ldquo;</span>
+        <p class="review-text">Llev&eacute; mi BMW R1250GS con un problema el&eacute;ctrico que nadie encontraba. En MotoTech lo diagnosticaron en una hora. Trato impecable y precios justos.</p>
+        <div class="review-author">
+          <div class="review-avatar">MG</div>
+          <div>
+            <div class="review-name">Marc Garc&iacute;a</div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="review-source">Google Reviews</div>
+          </div>
         </div>
-        <div>
-          <span class="sec-num reveal">// Por qué elegirnos</span>
-          <h2 class="h2 reveal d1" style="margin-bottom:1rem">Mecánicos de Confianza, Resultados Garantizados</h2>
-          <p class="lead reveal d2" style="margin-bottom:1.5rem">No somos un taller más. Combinamos experiencia, tecnología y pasión por las motos para ofrecer un servicio excepcional.</p>
-          <ul class="check-list reveal d3">
-            <li>Diagnóstico electrónico con equipos de última generación</li>
-            <li>Recambios originales y de primeras marcas</li>
-            <li>Presupuesto detallado y sin compromiso en 24 horas</li>
-            <li>Mecánicos certificados con formación continua</li>
-            <li>Garantía en todas las reparaciones</li>
-            <li>Servicio de recogida y entrega disponible</li>
-          </ul>
-          <div style="margin-top:2rem" class="reveal d4">
-            <a href="contacto.html" class="btn btn-primary"><i data-lucide="message-circle"></i> Contactar Ahora</a>
+      </div>
+      <div class="review-card reveal reveal-delay-1">
+        <span class="review-quote">&ldquo;</span>
+        <p class="review-text">Llevo 8 a&ntilde;os trayendo mis motos aqu&iacute;. Son honestos, r&aacute;pidos y los precios son justos. El mejor taller de Barcelona sin duda.</p>
+        <div class="review-author">
+          <div class="review-avatar">LP</div>
+          <div>
+            <div class="review-name">Laura Puig</div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="review-source">Google Reviews</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <span class="review-quote">&ldquo;</span>
+        <p class="review-text">Prepararon mi Kawasaki para la ITV y pas&oacute; a la primera. Adem&aacute;s me avisaron de un desgaste peligroso. Profesionales de verdad.</p>
+        <div class="review-author">
+          <div class="review-avatar">JR</div>
+          <div>
+            <div class="review-name">Jordi Ruiz</div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="review-source">Google Reviews</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ STATS INLINE ═══ -->
-  <section style="border-top:2px solid var(--border);border-bottom:2px solid var(--border)">
-    <div class="container">
-      <div class="stats-inline" data-stagger="100">
-        <div class="stat-item">
-          <div class="stat-num" data-count="20" data-suffix="+">0+</div>
-          <div class="stat-label">Años de experiencia</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num" data-count="5000" data-suffix="+">0+</div>
-          <div class="stat-label">Motos reparadas</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num" data-count="98" data-suffix="%">0%</div>
-          <div class="stat-label">Clientes satisfechos</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num" data-count="24" data-suffix="h">0h</div>
-          <div class="stat-label">Presupuesto express</div>
-        </div>
+  <!-- ═══ LOCATION — ASYMMETRIC ═══ -->
+  <section class="location-section" id="ubicacion">
+    <div class="location-info reveal from-left">
+      <div class="section-label">D&oacute;nde estamos</div>
+      <h2 style="font-family:var(--font-heading);font-weight:700;font-size:clamp(1.8rem,3vw,2.5rem);text-transform:uppercase;letter-spacing:-.02em;margin-bottom:1rem;">Vis&iacute;tanos en Barcelona</h2>
+      <div class="location-block">
+        <h4>Direcci&oacute;n</h4>
+        <p>Carrer de l'Exemple, 123<br>08001 Barcelona</p>
       </div>
+      <div class="location-block">
+        <h4>Horario</h4>
+        <p>Lunes a Viernes: 9:00 &mdash; 19:00<br>S&aacute;bado: 9:00 &mdash; 14:00<br>Domingo: Cerrado</p>
+      </div>
+      <div class="location-block">
+        <h4>Contacto</h4>
+        <p>Tel: 93 XXX XX XX<br>info@mototechbarcelona.com</p>
+      </div>
+    </div>
+    <div class="map-placeholder reveal from-right">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>Mapa de ubicaci&oacute;n</span>
+      <span style="font-size:.65rem;color:var(--grey)">Google Maps embed</span>
     </div>
   </section>
 
-  <!-- ═══ GALLERY — HORIZONTAL SCROLL ═══ -->
-  <section class="gallery-scroll-section" style="background:var(--bg-section)">
-    <div class="gallery-scroll-header">
-      <div>
-        <span class="sec-num reveal">// Nuestro trabajo</span>
-        <h2 class="h2 reveal d1">Galería de Trabajos</h2>
-      </div>
-      <a href="galeria.html" class="btn btn-outline btn-sm reveal d2"><i data-lucide="arrow-right" style="width:14px;height:14px"></i> Ver todo</a>
-    </div>
-    <div class="gallery-scroll-track">
-      <div class="gallery-scroll-card">
-        <div class="gallery-scroll-bg gp-1">Foto trabajo 1</div>
-        <div class="gallery-scroll-caption">
-          <small>Reparación</small>
-          <span>Restauración motor Yamaha MT-07</span>
-        </div>
-      </div>
-      <div class="gallery-scroll-card">
-        <div class="gallery-scroll-bg gp-2">Foto trabajo 2</div>
-        <div class="gallery-scroll-caption">
-          <small>Custom</small>
-          <span>Escape Akrapovic BMW R nineT</span>
-        </div>
-      </div>
-      <div class="gallery-scroll-card">
-        <div class="gallery-scroll-bg gp-3">Foto trabajo 3</div>
-        <div class="gallery-scroll-caption">
-          <small>Mantenimiento</small>
-          <span>Revisión completa Honda CB650R</span>
-        </div>
-      </div>
-      <div class="gallery-scroll-card">
-        <div class="gallery-scroll-bg gp-4">Foto trabajo 4</div>
-        <div class="gallery-scroll-caption">
-          <small>ITV</small>
-          <span>Preparación ITV Kawasaki Z900</span>
-        </div>
-      </div>
-      <div class="gallery-scroll-card">
-        <div class="gallery-scroll-bg gp-5">Foto trabajo 5</div>
-        <div class="gallery-scroll-caption">
-          <small>Custom</small>
-          <span>Personalización Ducati Scrambler</span>
-        </div>
-      </div>
-      <div class="gallery-scroll-card">
-        <div class="gallery-scroll-bg gp-6">Foto trabajo 6</div>
-        <div class="gallery-scroll-caption">
-          <small>Racing</small>
-          <span>Suspensión Ohlins KTM Duke 390</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ TESTIMONIALS ═══ -->
-  <section style="padding:6rem 0">
-    <div class="container">
-      <div class="sec-header center">
-        <span class="sec-num reveal">// Opiniones reales</span>
-        <h2 class="h2 reveal d1">Lo Que Dicen Nuestros Clientes</h2>
-        <p class="lead reveal d2">Más de 120 reseñas en Google con una valoración media de 4.8 estrellas.</p>
-      </div>
-      <div class="testimonials-grid" data-stagger="120">
-        <div class="testimonial">
-          <div class="t-quote">&ldquo;</div>
-          <p class="t-text">Llevé mi BMW R1250GS con un problema eléctrico que nadie encontraba. En MotoTech lo diagnosticaron en una hora y me la devolvieron perfecta al día siguiente. Trato impecable.</p>
-          <div class="t-author">
-            <div class="t-avatar">MG</div>
-            <div>
-              <div class="t-name">Marc García</div>
-              <div class="t-stars">★★★★★</div>
-              <div class="t-detail">Google Reviews</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="t-quote">&ldquo;</div>
-          <p class="t-text">Llevo 8 años trayendo todas mis motos aquí. Son honestos, rápidos y los precios son justos. El mejor taller de Barcelona sin duda. Me hicieron un custom en el escape que suena brutal.</p>
-          <div class="t-author">
-            <div class="t-avatar">LP</div>
-            <div>
-              <div class="t-name">Laura Puig</div>
-              <div class="t-stars">★★★★★</div>
-              <div class="t-detail">Google Reviews</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="t-quote">&ldquo;</div>
-          <p class="t-text">Prepararon mi Kawasaki para la ITV y pasó a la primera. Además me avisaron de un desgaste en las pastillas que podía haber sido peligroso. Profesionales de verdad.</p>
-          <div class="t-author">
-            <div class="t-avatar">JR</div>
-            <div>
-              <div class="t-name">Jordi Ruiz</div>
-              <div class="t-stars">★★★★★</div>
-              <div class="t-detail">Google Reviews</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ CTA + FORM — FULL ORANGE BG ═══ -->
+  <!-- ═══ CTA — MASSIVE TEXT-STROKE ═══ -->
   <section class="cta-section" id="contacto">
-    <div class="container">
-      <div class="cta-grid">
-        <div>
-          <span class="sec-num reveal" style="color:rgba(0,0,0,.4)">// Contacta con nosotros</span>
-          <h2 class="h2 reveal d1">¿Tu moto necesita atención?</h2>
-          <p class="lead reveal d2" style="margin-bottom:2.5rem">Cuéntanos qué le pasa a tu moto y te daremos un presupuesto sin compromiso en menos de 24 horas.</p>
-          <div class="reveal d3">
-            <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;color:rgba(0,0,0,.6)">
-              <i data-lucide="map-pin" style="width:18px;height:18px;flex-shrink:0;color:#000"></i>
-              <span style="font-size:.9rem">Carrer de l'Exemple, 123 — 08001 Barcelona</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;color:rgba(0,0,0,.6)">
-              <i data-lucide="phone" style="width:18px;height:18px;flex-shrink:0;color:#000"></i>
-              <span style="font-size:.9rem">93 XXX XX XX</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:.75rem;color:rgba(0,0,0,.6)">
-              <i data-lucide="clock" style="width:18px;height:18px;flex-shrink:0;color:#000"></i>
-              <span style="font-size:.9rem">Lun-Vie 9:00-19:00 · Sáb 9:00-14:00</span>
-            </div>
-          </div>
-        </div>
-        <div class="cta-form-card reveal d2">
-          <form data-form="Homepage CTA">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="cta-nombre">Nombre</label>
-                <input type="text" id="cta-nombre" name="nombre" placeholder="Tu nombre" required />
-              </div>
-              <div class="form-group">
-                <label for="cta-email">Email</label>
-                <input type="email" id="cta-email" name="email" placeholder="tu@email.com" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="cta-telefono">Teléfono</label>
-              <input type="tel" id="cta-telefono" name="telefono" placeholder="600 000 000" />
-            </div>
-            <div class="form-group">
-              <label for="cta-mensaje">¿Qué necesita tu moto?</label>
-              <textarea id="cta-mensaje" name="mensaje" placeholder="Describe la avería o servicio que necesitas..." rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">
-              <i data-lucide="send"></i> Solicitar Presupuesto
-            </button>
-            <p class="form-privacy" style="color:var(--text-muted)">Al enviar, aceptas nuestra <a href="#">política de privacidad</a>.</p>
-          </form>
-        </div>
-      </div>
+    <h2 class="cta-headline reveal">
+      &iquest;Tu Moto<br>Necesita <span class="filled">Atenci&oacute;n</span>?
+    </h2>
+    <p class="cta-sub reveal reveal-delay-1">Cu&eacute;ntanos qu&eacute; necesita tu moto y te daremos un presupuesto sin compromiso en menos de 24 horas.</p>
+    <div class="cta-buttons reveal reveal-delay-2">
+      <a href="https://wa.me/34600000000?text=Hola%2C%20quiero%20un%20presupuesto" target="_blank" rel="noopener" class="btn-angular btn-primary-a">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="tel:+34930000000" class="btn-angular btn-outline-a">Llamar Ahora</a>
     </div>
   </section>
 
-  <!-- ═══ FOOTER — MINIMAL ═══ -->
-  <footer id="footer">
-    <div class="container">
-      <div class="footer-row">
-        <a href="index.html" class="logo">
-          <span class="logo-mark"><i data-lucide="bike"></i></span>
-          MotoTech
-        </a>
-        <nav class="footer-nav" aria-label="Enlaces del pie">
-          <a href="index.html">Inicio</a>
-          <a href="servicios.html">Servicios</a>
-          <a href="galeria.html">Galería</a>
-          <a href="contacto.html">Contacto</a>
-        </nav>
-        <div class="social-row">
-          <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-          <a href="#" class="social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-          <a href="#" class="social-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
-        </div>
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="dot"></span>MotoTech</div>
+        <p class="footer-desc">Taller especializado en motos en Barcelona. M&aacute;s de 25 a&ntilde;os de experiencia, pasi&oacute;n y compromiso con cada m&aacute;quina.</p>
       </div>
-      <div class="footer-bottom">
-        <span class="footer-copy">&copy; 2024 MotoTech Barcelona. Todos los derechos reservados.</span>
-        <div class="footer-legal-links">
-          <a href="#">Aviso Legal</a>
-          <a href="#">Privacidad</a>
-          <a href="#">Cookies</a>
-        </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Navegaci&oacute;n</div>
+        <a href="#hero">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#opiniones">Opiniones</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Servicios</div>
+        <a href="#servicios">Reparaci&oacute;n</a>
+        <a href="#servicios">Mantenimiento</a>
+        <a href="#servicios">ITV</a>
+        <a href="#servicios">Custom</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contacto</div>
+        <a href="tel:+34930000000">93 XXX XX XX</a>
+        <a href="mailto:info@mototechbarcelona.com">info@mototech.com</a>
+        <a href="#ubicacion">Barcelona, 08001</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2024 MotoTech Barcelona. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="#">Aviso Legal</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
       </div>
     </div>
   </footer>
 
-  <!-- ═══ WHATSAPP ═══ -->
-  <a href="https://wa.me/34600000000?text=Hola%2C%20quiero%20información%20sobre%20vuestros%20servicios" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <!-- ═══ WHATSAPP FLOAT ═══ -->
+  <a href="https://wa.me/34600000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20vuestros%20servicios" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script src="assets/js/main.js"></script>
+<script>
+/* ══════════════════════════════════════════════
+   CUSTOM CURSOR
+   ══════════════════════════════════════════════ */
+;(function() {
+  const cursor = document.getElementById('cursor');
+  if (!cursor || window.matchMedia('(hover: none)').matches) return;
+
+  let mx = 0, my = 0, cx = 0, cy = 0;
+
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+  function tick() {
+    cx += (mx - cx) * 0.15;
+    cy += (my - cy) * 0.15;
+    cursor.style.left = cx + 'px';
+    cursor.style.top = cy + 'px';
+    requestAnimationFrame(tick);
+  }
+  tick();
+
+  const hoverEls = 'a, button, .service-card, .review-card, .btn-angular, .whatsapp-float';
+  document.querySelectorAll(hoverEls).forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('expand'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('expand'));
+  });
+})();
+
+/* ══════════════════════════════════════════════
+   HERO WORD STAGGER
+   ══════════════════════════════════════════════ */
+;(function() {
+  const words = document.querySelectorAll('.hero-headline .word-inner');
+  words.forEach((w, i) => {
+    setTimeout(() => w.classList.add('visible'), 300 + i * 120);
+  });
+})();
+
+/* ══════════════════════════════════════════════
+   HAMBURGER
+   ══════════════════════════════════════════════ */
+;(function() {
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      btn.classList.remove('active');
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════════
+   DRAG SCROLL — SERVICES
+   ══════════════════════════════════════════════ */
+;(function() {
+  const track = document.getElementById('servicesTrack');
+  if (!track) return;
+
+  let isDown = false, startX, scrollL, hasDragged = false;
+
+  track.addEventListener('mousedown', e => {
+    isDown = true;
+    hasDragged = false;
+    track.classList.add('dragging');
+    startX = e.pageX - track.offsetLeft;
+    scrollL = track.scrollLeft;
+  });
+
+  track.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    if (Math.abs(walk) > 5) hasDragged = true;
+    track.scrollLeft = scrollL - walk;
+  });
+
+  const stop = () => { isDown = false; track.classList.remove('dragging'); };
+  track.addEventListener('mouseup', stop);
+  track.addEventListener('mouseleave', stop);
+
+  // Prevent link click after drag
+  track.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', e => { if (hasDragged) e.preventDefault(); });
+  });
+
+  // Touch support
+  let touchStartX, touchScrollL;
+  track.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].pageX;
+    touchScrollL = track.scrollLeft;
+  }, { passive: true });
+  track.addEventListener('touchmove', e => {
+    const x = e.touches[0].pageX;
+    track.scrollLeft = touchScrollL - (x - touchStartX);
+  }, { passive: true });
+
+  // Make it scrollable
+  track.style.overflowX = 'auto';
+  track.style.scrollbarWidth = 'none';
+  track.style.msOverflowStyle = 'none';
+})();
+
+/* ══════════════════════════════════════════════
+   SCROLL REVEALS — IntersectionObserver
+   ══════════════════════════════════════════════ */
+;(function() {
+  const reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+  reveals.forEach(el => observer.observe(el));
+})();
+
+/* ══════════════════════════════════════════════
+   3D TILT ON HOVER
+   ══════════════════════════════════════════════ */
+;(function() {
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  document.querySelectorAll('.tilt-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(600px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) scale(1.02)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(600px) rotateY(0) rotateX(0) scale(1)';
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════════
+   SMOOTH SCROLL
+   ══════════════════════════════════════════════ */
+;(function() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>
